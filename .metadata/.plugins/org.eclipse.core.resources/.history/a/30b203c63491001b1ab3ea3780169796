@@ -1,0 +1,38 @@
+package _75_颜色分类;
+
+public class Sort {
+
+	public static void main(String[] args) {
+		int[] nums = {1, 0, 0, 2, 2, 1};
+		sortColors(nums);
+		System.out.print(nums);
+		System.out.print("\n");
+		for (int i = 0; i < nums.length; i++) {
+			System.out.print(nums[i]);
+			System.out.print(",");
+		}
+
+	}
+
+	/// https://leetcode-cn.com/problems/sort-colors/
+	public static void sortColors(int[] nums) {
+			
+//		if (nums.length == 0) {return int[]}
+		int l = 0;
+		int r = nums.length - 1;
+		int cur = r - 1;
+		
+		while (cur > l) {
+			
+			if (nums[cur] == 2) {
+				nums[r--] = nums[cur];
+			} 
+			else if (nums[cur] == 0) {
+				nums[l++] = nums[cur];
+			} else {
+				cur--;
+			}
+		}
+    }
+	
+}
