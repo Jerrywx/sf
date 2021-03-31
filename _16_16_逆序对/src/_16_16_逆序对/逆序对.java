@@ -11,6 +11,7 @@ public class 逆序对 {
 		System.out.print("\n");		
 	}
 	
+	/// https://leetcode-cn.com/problems/sub-sort-lcci/
 	public static int[] subSort(int[] array) {
 		
 		if (array.length == 0) return new int[]{-1, -1};
@@ -19,7 +20,6 @@ public class 逆序对 {
 		int end = - 1;
 		int max = array[0];
 		int min = array[array.length - 1];
-		
 		for (int i = 0; i < array.length; i++) {
 			if (array[i] >= max) {	
 				max = array[i];
@@ -37,11 +37,6 @@ public class 逆序对 {
 				end = i;
 			}
 		}
-		
-		System.out.print(end);		
-		System.out.print("\n");		
-		System.out.print(begin);		
-		
 		return new int[]{end, begin};
 	}
 
