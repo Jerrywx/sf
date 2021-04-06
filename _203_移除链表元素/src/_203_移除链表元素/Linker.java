@@ -35,7 +35,7 @@ public class Linker {
 		return newHead.next;
     }
 	
-public ListNode removeElements2(ListNode head, int val) {
+	public ListNode removeElements2(ListNode head, int val) {
 		
 		ListNode newHead = new ListNode(0);
 		ListNode curNode = newHead;
